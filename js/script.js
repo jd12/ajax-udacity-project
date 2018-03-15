@@ -21,7 +21,7 @@ function loadData() {
   var streetViewUrl = 'http://maps.googleapis.com/maps/api/streetview?size=600x300&location=' +
     address + '';
   $body.append('<img class="bgimg" src=" ' + streetViewUrl + '">');
-  return false;
+
 
   // Grab NY Times articles
   var nyTimesUrl = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + city + '&sort=newest&api-key=f37bca1123594e56a7249384657b5f0b';
@@ -55,6 +55,8 @@ function loadData() {
       }
     }
   });
+
+  return false;
 };
 
 $('#form-container').submit(loadData);
